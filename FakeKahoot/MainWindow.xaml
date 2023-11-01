@@ -10,8 +10,7 @@
         <ContentControl x:Name="UserControlContainer"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="Login to Play" VerticalAlignment="Top" FontSize="18" Foreground="#FFD6D6D6"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,32,0,0" TextWrapping="Wrap" Text="Welcome to Fake kahoot!" VerticalAlignment="Top" FontSize="22" Foreground="#FFD6D6D6"/>
-        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" Width="139" Height="24" Background="#FF675A5A" Foreground="#FFD7D6D6" Click="btnregister_Click"/>
-        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top" Width="140" Height="24" Background="#FF675A5A" Foreground="#FFD7D6D6" Click="btnlogin_Click"/>
+        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" Width="139" Height="24" Background="#FF675A5A" Foreground="#FFD7D6D6" Click="btnlogin_Click"/>
 
     </Grid>
 </Window>

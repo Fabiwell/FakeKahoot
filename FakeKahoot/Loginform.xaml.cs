@@ -20,9 +20,47 @@ namespace FakeKahoot
     /// </summary>
     public partial class Loginform : UserControl
     {
+        manageAccounts manageAccounts = new manageAccounts();
+        bool created = false;
+        bool loggedin = false;
+
         public Loginform()
         {
             InitializeComponent();
+        }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            string email = tbEmail.Text;
+            string pass = tbPass.Text;
+
+            if (email != "" && pass != "")
+            {
+
+                manageAccounts.CreateAccount(email, pass, ref created);
+
+                if (created)
+                {
+                    tbEmail.Text = "";
+                    tbPass.Text = "";
+                    lblAccountCreated.Content = "Account created";
+                }
+            }
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string email = tbEmail.Text;
+            string pass = tbPass.Text;
+
+            manageAccounts.LoginAccount(email, pass, ref loggedin);
+            if (loggedin)
+            {
+                quiz quizform = new quiz();
+                quizform.Show();
+
+                Window.GetWindow(this).Close();
+            }
         }
     }
 }

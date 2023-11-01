@@ -32,21 +32,23 @@ namespace FakeKahoot
         private void btnlogin_Click(object sender, RoutedEventArgs e)
         {
             Trace.WriteLine("button Login clicked");
-        }
 
-        private void btnregister_Click(object sender, RoutedEventArgs e)
-        {
             Trace.WriteLine("button register clicked");
 
             Window window = new Window
             {
                 Title = "Login Form",
                 Content = new Loginform(),
+                Width = 350,
+                Height = 414,
                 SizeToContent = SizeToContent.Width,
-                ResizeMode = ResizeMode.NoResize,
-                Owner = Window.GetWindow(this)
+                //ResizeMode = ResizeMode.NoResize,
+                Owner = Window.GetWindow(this),
+
             };
             window.ShowDialog();
+
+            this.Close();
         }
     }
 }
