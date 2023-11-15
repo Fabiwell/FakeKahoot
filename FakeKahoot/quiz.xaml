@@ -8,9 +8,9 @@
         Title="quiz" Height="450" Width="800">
     <Grid Background="#FF3F2E2E">
         <TextBlock HorizontalAlignment="Center" Margin="0,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFB7B7B7" FontSize="22" Height="30" Text="Select a Quiz"/>
-        <Button x:Name="btnQuiz1" Content="General Knowledge" HorizontalAlignment="Left" VerticalAlignment="Top" Width="176" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="197,104,0,0" Height="45" FontSize="20" Click="btnQuiz1_Click"/>
-        <Button x:Name="btnQuiz2" Content="Literature" VerticalAlignment="Top" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="427,104,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176"/>
-        <Button x:Name="btnQuiz3" Content="Science" VerticalAlignment="Center" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="197,0,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176"/>
-        <Button x:Name="btnQuiz4" Content="Geography" VerticalAlignment="Center" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="427,0,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176"/>
+        <Button x:Name="btnQuiz1" Content="General Knowledge" HorizontalAlignment="Left" VerticalAlignment="Top" Width="176" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="197,104,0,0" Height="45" FontSize="20" Click="btnCategory_Click"/>
+        <Button x:Name="btnQuiz2" Content="Literature" VerticalAlignment="Top" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="427,104,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnCategory_Click"/>
+        <Button x:Name="btnQuiz3" Content="Science" VerticalAlignment="Center" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="197,0,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnCategory_Click"/>
+        <Button x:Name="btnQuiz4" Content="Geography" VerticalAlignment="Center" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="427,0,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnCategory_Click"/>
     </Grid>
 </Window>

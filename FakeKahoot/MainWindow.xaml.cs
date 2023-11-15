@@ -42,7 +42,7 @@ namespace FakeKahoot
                 Width = 350,
                 Height = 414,
                 SizeToContent = SizeToContent.Width,
-                //ResizeMode = ResizeMode.NoResize,
+                ResizeMode = ResizeMode.NoResize,
                 Owner = Window.GetWindow(this),
 
             };

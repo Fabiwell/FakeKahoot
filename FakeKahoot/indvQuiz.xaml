@@ -1,0 +1,18 @@
+﻿<Window x:Class="FakeKahoot.indvQuiz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FakeKahoot"
+        mc:Ignorable="d"
+        Title="indvQuiz" Height="450" Width="800">
+    <Grid Background="#FF3F2E2E">
+        <TextBlock x:Name="lblTitle" HorizontalAlignment="Center" Margin="0,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFB7B7B7" FontSize="22" Height="30" Text="&lt;placeholder&gt;"/>
+        <Button x:Name="btnQuestion1" Content="&lt;placeholder&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="176" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="197,104,0,0" Height="45" FontSize="20" Click="btnAnswer_Click"/>
+        <Button x:Name="btnQuestion2" Content="&lt;placeholder&gt;" VerticalAlignment="Top" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="427,104,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnAnswer_Click"/>
+        <Button x:Name="btnQuestion3" Content="&lt;placeholder&gt;" VerticalAlignment="Center" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="197,0,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnAnswer_Click"/>
+        <Button x:Name="btnQuestion4" Content="&lt;placeholder&gt;" VerticalAlignment="Center" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="427,0,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnAnswer_Click"/>
+        <TextBlock x:Name="lblAmountLeft" HorizontalAlignment="Left" Margin="48,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFB7B7B7" FontSize="22" Height="30" Text="Questions Left:"/>
+        <TextBlock x:Name="lblAmountNumber" HorizontalAlignment="Left" Margin="197,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFB7B7B7" FontSize="22" Height="30" Text="69"/>
+    </Grid>
+</Window>

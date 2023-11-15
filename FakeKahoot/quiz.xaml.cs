@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,16 +20,25 @@ namespace FakeKahoot
     /// </summary>
     public partial class quiz : Window
     {
+
         public quiz()
         {
             InitializeComponent();
         }
 
-        private void btnQuiz1_Click(object sender, RoutedEventArgs e)
+        private void btnCategory_Click(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
+            string category = button.Content.ToString();
+
+            indvQuiz indvQuiz = new indvQuiz(category)
+            {
+                ResizeMode = ResizeMode.NoResize,
+                Owner = Window.GetWindow(this),
+            };
+            indvQuiz.Show();
 
         }
-
 
     }
 }
