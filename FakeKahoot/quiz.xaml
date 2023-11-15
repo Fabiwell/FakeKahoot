@@ -12,5 +12,6 @@
         <Button x:Name="btnQuiz2" Content="Literature" VerticalAlignment="Top" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="427,104,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnCategory_Click"/>
         <Button x:Name="btnQuiz3" Content="Science" VerticalAlignment="Center" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="197,0,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnCategory_Click"/>
         <Button x:Name="btnQuiz4" Content="Geography" VerticalAlignment="Center" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="427,0,0,0" Height="45" FontSize="20" HorizontalAlignment="Left" Width="176" Click="btnCategory_Click"/>
+        <Button x:Name="btnLeaderboard" Content="Leaderboard" VerticalAlignment="Top" Background="#FF675A5A" Foreground="#FFBAB7B7" Margin="0,309,0,0" Height="45" FontSize="20" HorizontalAlignment="Center" Width="176" Click="btnLeaderboard_Click"/>
     </Grid>
 </Window>

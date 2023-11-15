@@ -32,6 +32,12 @@ namespace FakeKahoot
             // Call the getData method on the leaderboardManager instance
             List<manageLeaderboard.Leaderboard> leaderboardData = leaderboardManager.getData();
             Trace.WriteLine(leaderboardData);
+
+            foreach (manageLeaderboard.Leaderboard leaderboard in leaderboardData)
+            {
+                Trace.WriteLine(leaderboard.accountName + " " + leaderboard.score);
+                lbLeaderBoard.Items.Add(leaderboard.accountName + " " + leaderboard.score);
+            }
         }
     }
 }

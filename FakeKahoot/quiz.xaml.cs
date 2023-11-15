@@ -40,5 +40,11 @@ namespace FakeKahoot
 
         }
 
+        private void btnLeaderboard_Click(object sender, RoutedEventArgs e)
+        {
+            Leaderboard leaderboard = new Leaderboard();
+
+            leaderboard.Show();
+        }
     }
 }

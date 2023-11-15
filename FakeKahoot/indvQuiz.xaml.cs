@@ -79,7 +79,7 @@ namespace FakeKahoot
                     }
                 }
                 // Calculate the user's score
-                double userScore = (double)correctAnswers / answer.Length * 100;
+                double userScore = ((double)correctAnswers / answer.Length) * 100;
 
                 Trace.WriteLine("User's Score: " + userScore + "%");
 
