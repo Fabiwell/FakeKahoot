@@ -13,5 +13,6 @@ namespace FakeKahoot
     /// </summary>
     public partial class App : Application
     {
+        public static string UserName { get; set; }
     }
 }

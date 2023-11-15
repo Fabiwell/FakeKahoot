@@ -53,7 +53,6 @@ namespace FakeKahoot
             if (index > 0)
             {
                 answerList.Add(answer);
-                Trace.WriteLine(answerList[0]);
 
                 fillContent(index, quizList);
                 index--;
@@ -85,7 +84,8 @@ namespace FakeKahoot
                 Trace.WriteLine("User's Score: " + userScore + "%");
 
                 Window.GetWindow(this).Close();
-
+                manageLeaderboard leaderboardManager = new manageLeaderboard(db);
+                bool result = leaderboardManager.setData(userScore);
                 Leaderboard leaderboard = new Leaderboard();
 
                 leaderboard.Show();

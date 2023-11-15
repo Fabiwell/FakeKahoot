@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,18 @@ namespace FakeKahoot
     /// </summary>
     public partial class Leaderboard : Window
     {
+        private database db;
         public Leaderboard()
         {
             InitializeComponent();
+
+            db = new database();
+
+            manageLeaderboard leaderboardManager = new manageLeaderboard(db);
+
+            // Call the getData method on the leaderboardManager instance
+            List<manageLeaderboard.Leaderboard> leaderboardData = leaderboardManager.getData();
+            Trace.WriteLine(leaderboardData);
         }
     }
 }

@@ -2,6 +2,7 @@
 using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -32,11 +33,10 @@ namespace FakeKahoot
                 {
                     while (reader.Read())
                     {
-                        string accountId = reader["account"].ToString();
                         string accountName = reader["accountName"].ToString();
                         string score = reader["score"].ToString();
 
-                        result.Add(new Leaderboard(accountId, accountName, score));
+                        result.Add(new Leaderboard(accountName, score));
                     }
                 }
 
@@ -51,18 +51,40 @@ namespace FakeKahoot
             return null;
         }
 
+        public bool setData(double score)
+        {
+            MySqlConnection conn = db.GetConnection();
+            string q = "INSERT INTO leaderboard(accountName, score) VALUES(@accountEmail, @score)";
+            MySqlCommand cmd = new MySqlCommand(q, conn);
+            cmd.Parameters.AddWithValue("@accountEmail", App.UserName);
+            cmd.Parameters.AddWithValue("@score", score);
+            try
+            {
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        Debug.WriteLine("Pushed Score");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
+            return true;
+        }
+
         public class Leaderboard
         {
-            public string accountId { get; set; }
             public string accountName { get; set; }
             public string score { get; set; }
 
-                public Leaderboard(string _accountId, string _accountName, string _score)
-                {
-                    accountId = _accountId;
-                    accountName = _accountName;
-                    score = _score;
-                }
+            public Leaderboard(string _accountName, string _score)
+            {
+                accountName = _accountName;
+                score = _score;
             }
         }
     }

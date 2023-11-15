@@ -65,6 +65,7 @@ namespace FakeKahoot
                     if (reader.Read())
                     {
                         Debug.WriteLine("loggedin");
+                        App.UserName = email;
                         loggedin = true;
                     }
                 }
